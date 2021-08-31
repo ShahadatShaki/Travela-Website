@@ -1,9 +1,15 @@
+@use 'partials/colors' as colors;
+@use 'partials/mixins' as mixins;
+@import 'partials/mixins';
+@import 'partials/containers';
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: colors.$white;
 }
 
 a {
@@ -14,3 +20,5 @@ a {
 * {
   box-sizing: border-box;
 }
+
+// @include mixins.for-phone-only {}
