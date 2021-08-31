@@ -1,0 +1,43 @@
+@use 'colors';
+
+.button {
+  /* Auto Layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+
+  left: 0px;
+  top: 200px;
+
+  /* Primary/1 */
+  background: colors.$pink;
+  border-radius: 90px;
+  color: colors.$white;
+  font-weight: bold;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 24px 0px;
+}
+
+.downloadApps {
+  width: 170px;
+  height: 48px;
+}
+
+.count {
+  margin-top: 16px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+
+  /* identical to box height, or 32px */
+  text-align: center;
+  text-transform: uppercase;
+}

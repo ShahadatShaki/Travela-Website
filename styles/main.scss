@@ -1,7 +1,10 @@
 @use 'partials/colors' as colors;
 @use 'partials/mixins' as mixins;
-@import 'partials/mixins';
-@import 'partials/containers';
+@import "partials/reset";
+@import "partials/utils";
+@import "partials/mixins";
+@import "partials/containers";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@400;600&display=swap");
 
 html,
 body {
@@ -10,6 +13,35 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: colors.$white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", sans-serif;
+  color: colors.$black;
+}
+
+span,
+p,
+div {
+  font-family: "Poppins", sans-serif;
+  color: colors.$fadedBlack;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  color: colors.$black;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin-bottom: 12px;
 }
 
 a {
