@@ -16,6 +16,7 @@
   border-radius: 90px;
   color: colors.$white;
   font-weight: bold;
+  font-family: "DM Sans", sans-serif;
 
   /* Inside Auto Layout */
   flex: none;
@@ -40,4 +41,47 @@
   /* identical to box height, or 32px */
   text-align: center;
   text-transform: uppercase;
+}
+
+.areaBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-block;
+  padding: 8px 12px 6px;
+  font-weight: bold;
+  color: colors.$white;
+  border-radius: 32px;
+  text-transform: uppercase;
+
+  &Dark {
+    background: colors.$black;
+  }
+
+  &Green {
+    background: colors.$green;
+  }
+}
+
+.buttonCircle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background: colors.$pink;
+  border-radius: 100px;
+  width: 32px;
+  height: 32px;
+}
+
+.smallTxt {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.sectionSubTitle {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 12px 0 80px 0;
 }

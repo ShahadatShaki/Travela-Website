@@ -1,9 +1,10 @@
 @import "partials/containers";
 @import "partials/utils";
+@import "./AvailableSection.module";
 
 .heroSection {
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  min-height: 968px;
 
   .banner {
     height: 776px;
@@ -11,8 +12,8 @@
     position: relative;
     background-image: linear-gradient(
         112.61deg,
-        rgba(221, 247, 255, 0.89) 4.38%,
-        rgba(255, 255, 255, 0) 81.77%
+        rgb(221, 247, 255, 0.89) 4.38%,
+        rgb(255, 255, 255, 0) 81.77%
       ),
       url("../public/images/hero-banner.png");
 
@@ -38,18 +39,15 @@
       justify-content: space-around;
       align-items: center;
       padding: 40px;
-
-      position: absolute;
       height: 208px;
       left: 386px;
       right: 386px;
-      bottom: 72px;
 
       /* effect/neutral 8 (glass) */
       background: linear-gradient(
         83.59deg,
-        #fcfcfd 36.52%,
-        rgba(252, 252, 253, 0.83) 98.8%
+        #fcfcfd,
+        rgb(252, 252, 253)
       );
 
       /* Neutrals/8 */

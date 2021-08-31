@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
+import AvailableSliderSection from './home/AvailableSlider';
 import HeroSection from './home/HeroSection';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroSection />
+      <AvailableSliderSection />
     </div>
   );
 }

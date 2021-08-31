@@ -1,0 +1,51 @@
+@use "partials/colors";
+
+.availableSection {
+  margin: 112px 0;
+  position: relative;
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+
+    .arrowBtn {
+      width: 40px;
+      height: 40px;
+      left: 48px;
+      top: 0px;
+      box-sizing: border-box;
+      border-radius: 40px;
+      outline: 0;
+      border: 0;
+      background: transparent;
+      
+      &Active {
+        border: 2px solid #e6e8ec;
+      }
+    }
+  }
+
+  .areaCardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    .areaCard {
+      .cardTopContent {
+        position: relative;
+
+        img {
+          width: 100%;
+          border-radius: 24px;
+        }
+      }
+
+      .cardBottomContent {
+        margin-top: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
