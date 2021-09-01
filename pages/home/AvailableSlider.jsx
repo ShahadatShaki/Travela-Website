@@ -1,31 +1,101 @@
+import Slider from 'react-slick'
+import { useRef, useEffect } from 'react';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import styles from "../../styles/Home.module.scss";
 
+
+const settings = {
+  infinite: true,
+  centerMode: false,
+  slidesToShow: 3,
+  arrows: false,
+  slidesToScroll: 1,
+  infinite: false,
+  // responsive: [
+  //   {
+  //     breakpoint: 768,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       dots: true,
+  //       initialSlide: 1,
+  //     },
+  //   },
+  //   {
+  //     breakpoint: 480,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  // ],
+}
+
+
 const AvailableSliderSection = () => {
+  const sliderRef = useRef()
+  
+  const handleSlider = (prev) => {
+    const slider = sliderRef.current
+    if (slider) {
+      if (prev) {
+        slider.slickPrev()
+      } else {
+        slider.slickNext()
+      }
+    }
+  }
+
+  useEffect(() => {
+    const slider = sliderRef.current
+    if (slider) {
+      const slickList = document.querySelector(
+        '.locations-slider .slick-track'
+      )
+      slickList.classList.add('divide-x')
+      slickList.classList.add('divide-line')
+    }
+  })
+
   return (
-    <div className={styles.containerPadded}>
+    <div className={styles.containerFluid}>
       <div className={styles.availableSection}>
-        <div className={styles.heading}>
+        <div className={styles.heading} >
           <div>
             <h2>We are available at</h2>
             <p className={styles.sectionSubTitle}>Let’s go on an adventure</p>
           </div>
           <div className={styles.arrowsAtSectionHead}>
-            <button className={styles.arrowBtn}>
+            <button
+              className={styles.arrowBtn}
+              onClick={() => handleSlider('prev')}>
               <img src="images/icons/left-arr2.png" />
             </button>
-            <button className={[styles.arrowBtn, styles.arrowBtnActive].join(' ')}>
+            <button
+              className={[styles.arrowBtn, styles.arrowBtnActive].join(' ')}
+              onClick={() => handleSlider()}>
               <img src="images/icons/right-arr2.png" />
             </button>
           </div>
         </div>
 
         <div className={styles.areaCardsContainer}>
+          <Slider
+            ref={sliderRef}
+            {...settings}
+            className="locations-slider"
+            >
           {[
             styles.areaBadgeDark,
             styles.areaBadgeDark,
             styles.areaBadgeGreen,
+            styles.areaBadgeDark,
+            styles.areaBadgeDark,
+            styles.areaBadgeGreen,
           ].map((color) => (
-            <div className={styles.areaCard}>
+            <div className={styles.areaCard} key={ color}>
               <div className={styles.cardTopContent}>
                 <span className={[styles.areaBadge, color].join(" ")}>
                   20% off
@@ -49,6 +119,7 @@ const AvailableSliderSection = () => {
               </div>
             </div>
           ))}
+          </Slider>
         </div>
       </div>
     </div>

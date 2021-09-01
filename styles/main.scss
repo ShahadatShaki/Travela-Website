@@ -60,4 +60,14 @@ button {
   box-sizing: border-box;
 }
 
+.locations-slider {
+  .slick-slide {
+    padding: 0 27px;
+  }
+  /* the parent */
+  .slick-list {
+    margin: 0 -27px;
+  }
+}
+
 // @include mixins.for-phone-only {}
