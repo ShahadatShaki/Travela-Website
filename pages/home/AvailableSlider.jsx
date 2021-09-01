@@ -105,16 +105,16 @@ const AvailableSliderSection = () => {
               <div className={styles.cardBottomContent}>
                 <div>
                   <h3 style={{ marginBottom: 8 }}>Dhaka</h3>
-                  <small className={styles.smallTxt}>
+                  <small className={styles.smallTxt} style={{display: 'flex', flexDirection: 'row'}}>
                     <img
                       src="images/icons/home.svg"
-                      style={{ marginRight: 6 }}
+                      style={{ marginRight: 6, width: 14 }}
                     />
-                    500+ properties
+                    <span>500+ properties</span>
                   </small>
                 </div>
                 <a href="#" className={styles.buttonCircle}>
-                  <img src="images/icons/arr-ri.svg" />
+                  <img src="images/icons/arr-ri.svg" style={{width: 14}} />
                 </a>
               </div>
             </div>

@@ -1,0 +1,56 @@
+.sectionHead {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.galleryContainer {
+  width: "90%";
+  margin: "56px auto";
+
+  .firstCol {
+    margin-top: 50px;
+    margin-left: 45px;
+
+    img {
+      margin-bottom: 4rem;
+    }
+
+    .imageTop {
+      margin-top: -2rem;
+    }
+
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      right: -75px;
+    }
+  }
+
+  .secondCol {
+    margin-left: 2rem;
+    img {
+      margin-bottom: 2rem;
+
+      &:first-child {
+        width: 80%;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .thirdCol {
+    margin-top: 100px;
+    margin-right: 60px;
+    position: absolute;
+    right: 0;
+    width: 35%;
+    img {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        width: 90%;
+      }
+    }
+  }
+}

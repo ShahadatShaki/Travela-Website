@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
 import AvailableSliderSection from './home/AvailableSlider';
 import HeroSection from './home/HeroSection';
+import MakeMoneySection from './home/MakeMoneySection';
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       </Head>
       <HeroSection />
       <AvailableSliderSection />
+      <MakeMoneySection />
     </div>
   );
 }
