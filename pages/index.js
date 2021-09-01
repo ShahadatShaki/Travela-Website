@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import AvailableSliderSection from './home/AvailableSlider';
+import DownloadSection from './home/DownloadSection';
 import HeroSection from './home/HeroSection';
 import MakeMoneySection from './home/MakeMoneySection';
 
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection />
       <AvailableSliderSection />
       <MakeMoneySection />
+      <DownloadSection />
     </div>
   );
 }

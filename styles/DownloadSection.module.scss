@@ -1,0 +1,25 @@
+@use 'partials/colors';
+@use 'partials/mixins';
+
+.downloadSection {
+  background-color: colors.$darkWhite;
+
+  .downloadWrapper {
+    height: 628px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .downloadButtons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @include mixins.desktop-less-than-1400 {
+    .downloadWrapper {
+      height: 500px;
+    }    
+  }
+}
