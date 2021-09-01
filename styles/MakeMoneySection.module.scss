@@ -28,7 +28,7 @@
   }
 
   .secondCol {
-    margin-left: 2rem;
+    margin-left: 1rem;
     img {
       margin-bottom: 2rem;
 
@@ -41,15 +41,15 @@
 
   .thirdCol {
     margin-top: 100px;
-    margin-right: 60px;
+    // margin-right: 60px;
     position: absolute;
     right: 0;
     width: 35%;
     img {
       margin-bottom: 2rem;
-
+      width: 90%;
       &:last-child {
-        width: 90%;
+        width: 80%;
       }
     }
   }
