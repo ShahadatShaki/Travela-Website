@@ -21,13 +21,60 @@
 
   .menuLink {
     margin: 0 1.2rem;
+    &:hover .dropDownCard {
+      opacity: 1;
+    }
   }
 
   .dropDown {
     cursor: pointer;
+    position: relative;
     &::after {
       margin-left: 1rem;
       content: url("menu-arrow-down.svg");
+    }
+
+    .dropDownCard {
+      position: absolute;
+      width: 736px;
+      background: colors.$white;
+      padding: 2rem;
+      z-index: 10;
+      box-shadow: 0px -2px 24px rgba(15, 15, 15, 0.06),
+        0px 31px 62px rgba(38, 15, 25, 0.08);
+      border-radius: 20px;
+      top: 40px;
+
+      // hidden
+      opacity: 0;
+
+      .dropDownLinksContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .dropDownLink {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 12px 12px 12px 20px;
+          border-radius: 8px;
+
+          div {
+            margin-left: 1rem;
+
+            p {
+              font-size: 12px;
+              line-height: 20px;
+              margin-top: .3rem;
+              font-weight: 400;
+            }
+          }
+
+          &:hover {
+            background-color: colors.$darkWhite;
+          }
+        }
+      }
     }
   }
 }

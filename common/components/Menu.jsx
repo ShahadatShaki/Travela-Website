@@ -18,9 +18,54 @@ const Menu = () => {
           </div>
           <div className={[styles.menuLink, styles.dropDown].join(' ')}>
             <a href="">Stays</a>
+
+            <div className={styles.dropDownCard}
+            >
+              <div className={styles.dropDownLinksContainer}>
+                <div className={styles.dropDownLink}>
+                  <img src="home1.png" alt="" />
+                  <div>
+                    <h3>Apartment</h3>
+                    <p>On Demand Apartment at anytime</p>
+                  </div>
+                </div>
+                <div className={styles.dropDownLink}>
+                  <img src="home1.png" alt="" />
+                  <div>
+                    <h3>Apartment</h3>
+                    <p>On Demand Apartment at anytime</p>
+                  </div>
+                </div>
+                <div className={styles.dropDownLink}>
+                  <img src="home1.png" alt="" />
+                  <div>
+                    <h3>Apartment</h3>
+                    <p>On Demand Apartment at anytime</p>
+                  </div>
+                </div>
+                <div className={styles.dropDownLink}>
+                  <img src="home1.png" alt="" />
+                  <div>
+                    <h3>Apartment</h3>
+                    <p>On Demand Apartment at anytime</p>
+                  </div>
+                </div>
+              </div>
+              <div className="dropDownFooter"></div>
+            </div>
           </div>
           <div className={[styles.menuLink, styles.dropDown].join(' ')}>
             <a href="">About Us</a>
+            <div className={styles.dropDownCard} style={{width: 481}}>
+              <div className={styles.dropDownLinksContainer} style={{display: 'block'}}>
+                <div>
+                  <h3 style={{fontSize: 24, marginBottom: 15}}>About Us</h3>
+                  <p>
+                    Founded in 2021, Travela is among the fastest growing startups in Bangladesh which connects Space owners with Users looking to find & and book spaces for their needs.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div className={styles.menuLink}>
             <a href="">Contact Us</a>
