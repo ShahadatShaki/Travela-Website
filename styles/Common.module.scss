@@ -1,0 +1,33 @@
+@use 'partials/colors';
+@import "partials/containers";
+@import "partials/utils";
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+
+  .leftPart {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .logo {
+    padding-right: 2rem;
+    border-right: 1px solid #e6e8ec;
+  }
+
+  .menuLink {
+    margin: 0 1.2rem;
+  }
+
+  .dropDown {
+    cursor: pointer;
+    &::after {
+      margin-left: 1rem;
+      content: url("menu-arrow-down.svg");
+    }
+  }
+}
