@@ -51,7 +51,17 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
-              <div className="dropDownFooter"></div>
+              <div className={styles.dropDownFooter}>
+                <h3>Download the app</h3>
+                <div className={styles.downloadButtons}>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src="images/button-app.png" alt="" />
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <img src="images/button-play.png" alt="" />
+              </a>
+            </div>
+              </div>
             </div>
           </div>
           <div className={[styles.menuLink, styles.dropDown].join(' ')}>
