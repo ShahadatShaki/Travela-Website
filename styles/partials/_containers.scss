@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .containerFluid {
   width: 1280px;
   margin: 0 auto;
@@ -9,10 +11,19 @@
   @media (max-width: 1300px) {
     width: 1100px;
   }
+
+  @include mixins.for-phone-only {
+    width: 100%;
+  }
 }
 
 .containerPadded {
   width: 1280px;
   padding: 0 3rem;
   margin: 0 auto;
+
+  @include mixins.for-phone-only {
+    width: 100%;
+    padding: 0 1rem;
+  }
 }
