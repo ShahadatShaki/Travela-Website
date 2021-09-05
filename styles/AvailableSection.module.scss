@@ -1,8 +1,13 @@
 @use "partials/colors";
+@use "partials/mixins";
 
 .availableSection {
   margin: 112px 0;
   position: relative;
+
+  @include mixins.for-phone-only {
+    padding: 0 2rem;
+  }
 
   .heading {
     display: flex;

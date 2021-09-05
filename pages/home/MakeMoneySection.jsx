@@ -8,16 +8,10 @@ const MakeMoneySection = () => {
         <span>Find trips that fit a flexible lifestyle</span>
       </div>
       <div className={styles.galleryContainer}>
-      <div className="gallery"
-        style={{
-          display: 'grid',
-          position: 'relative',
-          // gap: 5,
-          gridTemplateColumns: '1fr 1fr 1fr',
-        }}>
+      <div className={styles.gallery}>
         <div className={styles.firstCol}>
           <img className={styles.roundedImage} src="images/gallery/lady-half.png" alt="" />
-          <div style={{zIndex: 6, position: 'relative'}}>
+          <div>
             <img className={styles.roundedImage} src="images/gallery/bedpic.png" alt="" />
             <img className={[styles.roundedImage, styles.imageTop].join(' ')} src="images/gallery/selfie.png" alt="" />
           </div>
