@@ -3,6 +3,7 @@ import Menu from '../common/components/Menu';
 import AboutSection from './home/AboutSection';
 import AvailableSliderSection from './home/AvailableSlider';
 import DownloadSection from './home/DownloadSection';
+import Footer from './home/Footer';
 import HeroSection from './home/HeroSection';
 import MakeMoneySection from './home/MakeMoneySection';
 
@@ -20,6 +21,7 @@ export default function Home() {
       <MakeMoneySection />
       <DownloadSection />
       <AboutSection />
+      <Footer />
     </div>
   );
 }

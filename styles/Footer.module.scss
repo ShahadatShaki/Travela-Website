@@ -1,0 +1,58 @@
+@use 'partials/colors';
+
+.footer {
+  padding: 5rem 0;
+  border-top: 1px solid #e6e8ec;
+
+  .footerGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .footerItem {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+
+      a:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .subsLabel {
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    .mailInput {
+      height: 48px;
+      border-radius: 90px;
+      border: 2px solid #e6e8ec;
+      position: relative;
+
+      input[type="email"] {
+        position: absolute;
+        left: 0;
+        width: 85%;
+        height: 100%;
+        border: 0;
+        outline: 0;
+        border-radius: 90px;
+        padding: 4px;
+        margin-left: 10px;
+      }
+      button[type="submit"] {
+        background-color: colors.$pink;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        right: 0;
+        height: 2rem;
+        width: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 100px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
