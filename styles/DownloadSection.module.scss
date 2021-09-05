@@ -4,11 +4,21 @@
 .downloadSection {
   background-color: colors.$darkWhite;
 
+  @include mixins.for-phone-only {
+    height: 700px;
+  }
+
   .downloadWrapper {
     height: 628px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mixins.for-phone-only {
+      height: 100%;
+      padding: 3rem 1rem;
+      flex-direction: column;
+    }
   }
 
   .downloadButtons {
@@ -20,6 +30,6 @@
   @include mixins.desktop-less-than-1400 {
     .downloadWrapper {
       height: 500px;
-    }    
+    }
   }
 }

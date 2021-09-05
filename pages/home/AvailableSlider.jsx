@@ -66,7 +66,7 @@ const AvailableSliderSection = () => {
             <h2>We are available at</h2>
             <p className={styles.sectionSubTitle}>Let’s go on an adventure</p>
           </div>
-          <div className={styles.arrowsAtSectionHead}>
+          <div className={styles.sliderArrowButtons}>
             <button
               className={styles.arrowBtn}
               onClick={() => handleSlider('prev')}>

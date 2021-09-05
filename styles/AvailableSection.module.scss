@@ -7,6 +7,12 @@
 
   @include mixins.for-phone-only {
     padding: 0 2rem;
+  
+    .sliderArrowButtons {
+      position: absolute;
+      bottom: -4rem;
+      left: 1.5rem;
+    }
   }
 
   .heading {
