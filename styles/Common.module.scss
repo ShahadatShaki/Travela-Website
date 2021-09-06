@@ -48,7 +48,7 @@
       display: flex;
 
       @include mixins.for-tablet-portrait-up {
-        .mobileOnly {
+        .mobileOnly, .mobileDownloadBtn {
           display: none;
         }
       }
@@ -82,6 +82,11 @@
           .mobileOnly {
             margin-right: 13px;
           }
+        }
+
+        .mobileDownloadBtn {
+          display: block;
+          width: 100%;
         }
       }
 

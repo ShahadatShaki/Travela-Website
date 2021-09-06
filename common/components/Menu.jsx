@@ -113,6 +113,9 @@ const Menu = ({aboutContent, stays}) => {
                   <span>Contact Us</span>
                 </a>
               </div>
+              <div className={styles.mobileDownloadBtn}>
+                <DownloadButton styleObjects={{ margin: 0, display: 'block', width: '100%', textAlign: 'center' }} />
+              </div>
             </div>
           </div>
           <div className={styles.rightPart}>
