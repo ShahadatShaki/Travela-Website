@@ -92,6 +92,7 @@
 
       @include mixins.for-tablet-landscape-up {
         min-width: 600px;
+        padding-bottom: 50px;
       }
 
       @include mixins.for-phone-only {

@@ -1,6 +1,6 @@
 import styles from "../../styles/Common.module.scss";
 
-const MenuDrawer = ({ open, onClose }) => {
+const MenuDrawer = ({ open, onClose, stays }) => {
   return open ? (<>
     <div className="drawer">
         <div className={styles.mobileMenuCardBottomWrapper}>
@@ -16,34 +16,15 @@ const MenuDrawer = ({ open, onClose }) => {
           }} />
           <div className={styles.mobileMenuCardBottom}>
             <div className={styles.menuLinksContainer}>
-              <div className={styles.dropDownLink}>
-                <img src="home1.png" alt="" />
+            {stays?.map((stay, index) => (
+              <div className={styles.dropDownLink} key={index}>
+                <img src={stay?.icon} alt="" />
                 <div>
-                  <h3>Apartment</h3>
-                  <p>On Demand Apartment at anytime</p>
+                  <h3>{stay?.title}</h3>
+                  <p>{stay?.description}</p>
                 </div>
               </div>
-              <div className={styles.dropDownLink}>
-                <img src="home1.png" alt="" />
-                <div>
-                  <h3>Apartment</h3>
-                  <p>On Demand Apartment at anytime</p>
-                </div>
-              </div>
-              <div className={styles.dropDownLink}>
-                <img src="home1.png" alt="" />
-                <div>
-                  <h3>Apartment</h3>
-                  <p>On Demand Apartment at anytime</p>
-                </div>
-              </div>
-              <div className={styles.dropDownLink}>
-                <img src="home1.png" alt="" />
-                <div>
-                  <h3>Apartment</h3>
-                  <p>On Demand Apartment at anytime</p>
-                </div>
-              </div>
+              ))}
             </div>
             <div className={styles.dropDownFooter}>
               <h3>Download the app</h3>

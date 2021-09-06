@@ -4,20 +4,23 @@
 .downloadSection {
   background-color: colors.$darkWhite;
 
-  @include mixins.for-phone-only {
-    height: 700px;
-  }
-
   .downloadWrapper {
-    height: 628px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    .mobileMockup {
+      align-self: end;
+      width: 50%;
+    }
+
     @include mixins.for-phone-only {
-      height: 100%;
-      padding: 3rem 1rem;
+      padding: 3rem 2rem 0 2rem;
       flex-direction: column;
+
+      .mobileMockup {
+        width: 100%;
+      }
     }
   }
 
@@ -25,11 +28,11 @@
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-  }
 
-  @include mixins.desktop-less-than-1400 {
-    .downloadWrapper {
-      height: 500px;
+    @include mixins.for-phone-only {
+      img {
+        max-width: 90%;
+      }
     }
   }
 }

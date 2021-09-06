@@ -5,7 +5,7 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.containerFluid}>
         <div className={styles.footerGrid}>
-          <div className="footer-logo">
+          <div className={styles.footerLogo}>
             <img src="images/travela-logo.png" alt="Travela" />
           </div>
           <div className={styles.footerItem}>
@@ -21,7 +21,7 @@ const Footer = () => {
             <a href="">Download</a>
           </div>
 
-          <div className={[styles.footerItem, styles.mailSubs].join(' ')}>
+          {/* <div className={[styles.footerItem, styles.mailSubs].join(' ')}>
             <strong className={styles.subsLabel}>Join our community 🔥</strong>
             <form action="." method="post">
               <div className={styles.mailInput}>
@@ -31,7 +31,7 @@ const Footer = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

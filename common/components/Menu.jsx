@@ -3,11 +3,19 @@ import MenuDrawer from './MenuDrawer';
 import styles from "../../styles/Common.module.scss";
 import { useState } from "react";
 
-const Menu = () => {
+const Menu = ({aboutContent, stays}) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const handleOnClose = () => setDrawerOpen(prevState => !prevState);
+  const handleDrawerOnClose = () => {
+    setMenuOpen(false);
+    setDrawerOpen(prevState => !prevState);
+  }
+
+  const handleDrawerOpen = () => {
+    setMenuOpen(false);
+    setDrawerOpen(true);
+  }
 
   const mobileMenuToggle = () => setMenuOpen(prevState => !prevState);
 
@@ -30,42 +38,23 @@ const Menu = () => {
                 </a>
               </div>
               <div className={[styles.menuLink, styles.dropDown].join(" ")}
-              onClick={() => setDrawerOpen(true)}>
-                <a href="">
+              onClick={handleDrawerOpen}>
+                <span>
                   <img className={styles.mobileOnly} src="images/icons/home.svg" />
                   <span>Stays</span>
-                </a>
+                </span>
 
                 <div className={styles.dropDownCard}>
                   <div className={styles.dropDownLinksContainer}>
-                    <div className={styles.dropDownLink}>
-                      <img src="home1.png" alt="" />
-                      <div>
-                        <h3>Apartment</h3>
-                        <p>On Demand Apartment at anytime</p>
+                    {stays?.map((stay, index) => (
+                      <div className={styles.dropDownLink} key={index}>
+                        <img src={stay?.icon} alt="" />
+                        <div>
+                          <h3>{stay?.title}</h3>
+                          <p>{stay?.description}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className={styles.dropDownLink}>
-                      <img src="home1.png" alt="" />
-                      <div>
-                        <h3>Apartment</h3>
-                        <p>On Demand Apartment at anytime</p>
-                      </div>
-                    </div>
-                    <div className={styles.dropDownLink}>
-                      <img src="home1.png" alt="" />
-                      <div>
-                        <h3>Apartment</h3>
-                        <p>On Demand Apartment at anytime</p>
-                      </div>
-                    </div>
-                    <div className={styles.dropDownLink}>
-                      <img src="home1.png" alt="" />
-                      <div>
-                        <h3>Apartment</h3>
-                        <p>On Demand Apartment at anytime</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                   <div className={styles.dropDownFooter}>
                     <h3>Download the app</h3>
@@ -103,9 +92,7 @@ const Menu = () => {
                         About Us
                       </h3>
                       <p>
-                        Founded in 2021, Travela is among the fastest growing
-                        startups in Bangladesh which connects Space owners with
-                        Users looking to find & and book spaces for their needs.
+                        {aboutContent ? aboutContent : ''}
                       </p>
                     </div>
                   </div>
@@ -124,7 +111,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-      <MenuDrawer open={drawerOpen} onClose={handleOnClose} />
+      <MenuDrawer open={drawerOpen} onClose={handleDrawerOnClose} stays={stays} />
     </>
   );
 };

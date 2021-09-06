@@ -7,7 +7,7 @@ const DownloadSection = () => {
         <div
           className={styles.downloadWrapper}
         >
-          <div style={{ flexGrow: 1 }}>
+          <div>
             <h2>Download the app</h2>
             <span>
               Download now & avail all of our services through the app
@@ -22,8 +22,8 @@ const DownloadSection = () => {
               </a>
             </div>
           </div>
-          <div style={{alignSelf: 'flex-end'}}>
-            <img src="images/mobiles.png" alt="" />
+          <div className={ styles.mobileMockup}>
+            <img src="images/mobiles.svg" alt="Travela App" width="100%" />
           </div>
         </div>
       </div>

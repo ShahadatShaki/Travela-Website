@@ -1,6 +1,6 @@
 import styles from '../../styles/Home.module.scss';
 
-const HeroSection = () => {
+const HeroSection = ({bookingCount, usersCount}) => {
   return (
     <div className={styles.containerFluid}>
       <div className={styles.heroSection}>
@@ -15,12 +15,12 @@ const HeroSection = () => {
           <div className={styles.megaSearchBox}>
             <div>
               <img src="images/icons/user.svg" alt="Registered User" />
-              <h1 className={styles.count}>200+</h1>
+              <h1 className={styles.count}>{usersCount}+</h1>
               <p>Registered user</p>
             </div>
             <div>
               <img src="images/icons/booking.svg" alt="Booking" />
-              <h1 className={styles.count}>50+</h1>
+              <h1 className={styles.count}>{bookingCount}+</h1>
               <p>Booking</p>
             </div>
           </div>

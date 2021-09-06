@@ -1,0 +1,1 @@
+export const BASE_URL = "https://travela-53d75-default-rtdb.firebaseio.com/website.json";

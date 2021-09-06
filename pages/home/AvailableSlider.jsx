@@ -25,6 +25,9 @@ const settings = {
     {
       breakpoint: 480,
       settings: {
+        initialSlide: 0,
+        infinite: true,
+        autoPlay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
       },
@@ -33,7 +36,7 @@ const settings = {
 }
 
 
-const AvailableSliderSection = () => {
+const AvailableSliderSection = ({locations}) => {
   const sliderRef = useRef()
   
   const handleSlider = (prev) => {
@@ -86,30 +89,23 @@ const AvailableSliderSection = () => {
             {...settings}
             className="locations-slider"
             >
-          {[
-            styles.areaBadgeDark,
-            styles.areaBadgeDark,
-            styles.areaBadgeGreen,
-            styles.areaBadgeDark,
-            styles.areaBadgeDark,
-            styles.areaBadgeGreen,
-          ].map((color) => (
-            <div className={styles.areaCard} key={ color}>
+          {locations?.map((location) => (
+            <div className={styles.areaCard} key={ location}>
               <div className={styles.cardTopContent}>
-                <span className={[styles.areaBadge, color].join(" ")}>
-                  20% off
+                <span className={`${styles.areaBadge} ${styles.areaBadgeDark}`}>
+                  {location?.discount}% off
                 </span>
-                <img src="images/dhaka.png" alt="Dhaka" />
+                <img src={location?.image} alt={location.title} />
               </div>
               <div className={styles.cardBottomContent}>
                 <div>
-                  <h3 style={{ marginBottom: 8 }}>Dhaka</h3>
+                  <h3 style={{ marginBottom: 8 }}>{location?.title}</h3>
                   <small className={styles.smallTxt} style={{display: 'flex', flexDirection: 'row'}}>
                     <img
-                      src="images/icons/home.svg"
+                      src={"images/icons/home.svg"}
                       style={{ marginRight: 6, width: 14 }}
                     />
-                    <span>500+ properties</span>
+                    <span>{location.description}</span>
                   </small>
                 </div>
                 <a href="#" className={styles.buttonCircle}>
