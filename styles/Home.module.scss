@@ -90,6 +90,10 @@
       border-radius: 24px;
       text-align: center;
 
+      @include mixins.for-tablet-landscape-up {
+        min-width: 600px;
+      }
+
       @include mixins.for-phone-only {
         width: 100%;
         left: 0;
