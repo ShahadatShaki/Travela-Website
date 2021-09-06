@@ -272,3 +272,15 @@
     height: 100%;
   }
 }
+
+.downloadButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @include mixins.for-phone-only {
+    img {
+      max-width: 90%;
+    }
+  }
+}

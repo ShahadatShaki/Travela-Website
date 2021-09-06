@@ -1,6 +1,10 @@
 import styles from "../../styles/Common.module.scss";
+import PlayDownloadButtons from "./PlayDownloadIButtons";
 
-const MenuDrawer = ({ open, onClose, stays }) => {
+const MenuDrawer = ({ open, onClose, data }) => {
+  const stays = data?.type === 'stays' ? data.data : null;
+  const aboutData = data?.type === 'about' ? data.data : null;
+
   return open ? (<>
     <div className="drawer">
         <div className={styles.mobileMenuCardBottomWrapper}>
@@ -16,7 +20,7 @@ const MenuDrawer = ({ open, onClose, stays }) => {
           }} />
           <div className={styles.mobileMenuCardBottom}>
             <div className={styles.menuLinksContainer}>
-            {stays?.map((stay, index) => (
+            {stays && stays?.map((stay, index) => (
               <div className={styles.dropDownLink} key={index}>
                 <img src={stay?.icon} alt="" />
                 <div>
@@ -24,18 +28,13 @@ const MenuDrawer = ({ open, onClose, stays }) => {
                   <p>{stay?.description}</p>
                 </div>
               </div>
-              ))}
+            ))}
+            
+            {aboutData && <p>{aboutData}</p>}
             </div>
             <div className={styles.dropDownFooter}>
               <h3>Download the app</h3>
-              <div className={styles.downloadButtons}>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                  <img src="images/button-app.png" alt="" />
-                </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                  <img src="images/button-play.png" alt="" />
-                </a>
-              </div>
+              <PlayDownloadButtons />
             </div>
           </div>
         </div>
@@ -43,5 +42,5 @@ const MenuDrawer = ({ open, onClose, stays }) => {
       <div class={styles.drawerOverlay} id="modal-overlay"></div>
     </>): null;
 }
- 
+
 export default MenuDrawer;

@@ -6,13 +6,15 @@ import { useState } from "react";
 const Menu = ({aboutContent, stays}) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false)
+  const [drawerData, setDrawerData] = useState(null);
 
   const handleDrawerOnClose = () => {
     setMenuOpen(false);
     setDrawerOpen(prevState => !prevState);
   }
 
-  const handleDrawerOpen = () => {
+  const handleDrawerOpen = (data) => {
+    setDrawerData(data);
     setMenuOpen(false);
     setDrawerOpen(true);
   }
@@ -32,13 +34,17 @@ const Menu = ({aboutContent, stays}) => {
             </div>
             <div className={`${styles.menuLinks} ${!menuOpen ? styles.menuLinksHidden: 'Hidden'}`}>
               <div className={styles.menuLink}>
-                <a href="">
+                <a href="#">
                   <img className={styles.mobileOnly} src="images/icons/home.svg" />
                   <span>Home</span>
                 </a>
               </div>
-              <div className={[styles.menuLink, styles.dropDown].join(" ")}
-              onClick={handleDrawerOpen}>
+              <div
+                className={[styles.menuLink, styles.dropDown].join(" ")}
+                onClick={
+                  () => handleDrawerOpen({ type: 'stays', data: stays })
+                }
+              >
                 <span>
                   <img className={styles.mobileOnly} src="images/icons/home.svg" />
                   <span>Stays</span>
@@ -77,11 +83,14 @@ const Menu = ({aboutContent, stays}) => {
                   </div>
                 </div>
               </div>
-              <div className={[styles.menuLink, styles.dropDown].join(" ")}>
-                <a href="">
+              <div className={[styles.menuLink, styles.dropDown].join(" ")}
+                onClick={
+                  () => handleDrawerOpen({ type: 'about', data: aboutContent })
+                }>
+                <span>
                   <img className={styles.mobileOnly} src="images/icons/home.svg" />
                   <span>About Us</span>
-                </a>
+                </span>
                 <div className={styles.dropDownCard} style={{ width: 481 }}>
                   <div
                     className={styles.dropDownLinksContainer}
@@ -111,7 +120,10 @@ const Menu = ({aboutContent, stays}) => {
           </div>
         </div>
       </div>
-      <MenuDrawer open={drawerOpen} onClose={handleDrawerOnClose} stays={stays} />
+      <MenuDrawer
+        open={drawerOpen}
+        onClose={handleDrawerOnClose}
+        data={drawerData} />
     </>
   );
 };
