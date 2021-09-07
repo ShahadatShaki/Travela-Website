@@ -1,10 +1,12 @@
 import styles from "../../styles/Common.module.scss";
 
-const DownloadButton = ({styleObjects}) => {
+const DownloadButton = ({downloadRef, downloadRefScroll, styleObjects}) => {
   return (
-    <a href="" style={styleObjects} className={[styles.button, styles.downloadApps].join(" ")}>
+    <span style={styleObjects} className={[styles.button, styles.downloadApps].join(" ")}
+      onClick={() => downloadRefScroll(downloadRef)}
+    >
       Download Apps
-    </a>
+    </span>
   );
 };
 

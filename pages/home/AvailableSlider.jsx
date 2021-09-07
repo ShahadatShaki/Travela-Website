@@ -89,7 +89,7 @@ const AvailableSliderSection = ({locations}) => {
             {...settings}
             className="locations-slider"
             >
-          {locations?.map((location) => (
+          {locations.length > 0 && locations?.map((location) => (
             <div className={styles.areaCard} key={ location}>
               <div className={styles.cardTopContent}>
                 <span className={`${styles.areaBadge} ${styles.areaBadgeDark}`}>
@@ -105,7 +105,7 @@ const AvailableSliderSection = ({locations}) => {
                       src={"images/icons/home.svg"}
                       style={{ marginRight: 6, width: 14 }}
                     />
-                    <span>{location.description}</span>
+                    <span>{location?.description}</span>
                   </small>
                 </div>
                 <a href="#" className={styles.buttonCircle}>

@@ -3,7 +3,7 @@ import MenuDrawer from './MenuDrawer';
 import styles from "../../styles/Common.module.scss";
 import { useState } from "react";
 
-const Menu = ({aboutContent, stays}) => {
+const Menu = ({aboutContent, stays, downloadRef, downloadRefScroll}) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false)
   const [drawerData, setDrawerData] = useState(null);
@@ -114,12 +114,20 @@ const Menu = ({aboutContent, stays}) => {
                 </a>
               </div>
               <div className={styles.mobileDownloadBtn}>
-                <DownloadButton styleObjects={{ margin: 0, display: 'block', width: '100%', textAlign: 'center' }} />
+                <DownloadButton
+                  downloadRef={downloadRef}
+                  downloadRefScroll={downloadRefScroll}
+                  styleObjects={{ margin: 0, display: 'block', width: '100%', textAlign: 'center' }}
+                />
               </div>
             </div>
           </div>
           <div className={styles.rightPart}>
-            <DownloadButton styleObjects={{ margin: 0 }} />
+            <DownloadButton
+              downloadRef={downloadRef}
+              downloadRefScroll={downloadRefScroll}
+              styleObjects={{ margin: 0 }}
+            />
           </div>
         </div>
       </div>

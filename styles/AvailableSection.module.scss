@@ -6,7 +6,7 @@
   position: relative;
 
   @include mixins.for-phone-only {
-    padding: 0 2rem;
+    padding: 3rem 2rem 0 2rem;
   
     .sliderArrowButtons {
       position: absolute;

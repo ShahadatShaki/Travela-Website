@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Menu from "../common/components/Menu";
 import { BASE_URL } from "../utils/api";
 import AboutSection from "./home/AboutSection";
@@ -10,6 +10,7 @@ import HeroSection from "./home/HeroSection";
 import MakeMoneySection from "./home/MakeMoneySection";
 
 export default function Home() {
+  const downloadRef = useRef(null);
   const [aboutUs, setAboutUs] = useState("");
   const [contactUs, setContactUs] = useState("");
   const [places, setPlaces] = useState([]);
@@ -30,6 +31,9 @@ export default function Home() {
       });
   }, []);
 
+  const downloadRefScroll = (downloadRef) =>
+    downloadRef.current.scrollIntoView({ behavior: "smooth" });
+
   return (
     <div>
       <Head>
@@ -37,11 +41,21 @@ export default function Home() {
         <meta name="description" content="Travela" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Menu aboutContent={aboutUs} stays={stays} />
-      <HeroSection bookingCount={totalBooking} usersCount={totalUsers} />
+      <Menu
+        aboutContent={aboutUs}
+        stays={stays}
+        downloadRefScroll={downloadRefScroll}
+        downloadRef={downloadRef}
+      />
+      <HeroSection
+        bookingCount={totalBooking}
+        usersCount={totalUsers}
+        downloadRefScroll={downloadRefScroll}
+        downloadRef={downloadRef}
+      />
       <AvailableSliderSection locations={places} />
       <MakeMoneySection />
-      <DownloadSection />
+      <DownloadSection downloadRef={downloadRef} />
       <AboutSection contactContent={contactUs} />
       <Footer />
     </div>

@@ -72,8 +72,6 @@
       align-items: center;
       padding: 40px;
       height: 208px;
-      left: 386px;
-      right: 386px;
 
       /* effect/neutral 8 (glass) */
       background: linear-gradient(83.59deg, #fcfcfd, rgb(252, 252, 253));
@@ -93,6 +91,8 @@
       @include mixins.for-tablet-landscape-up {
         min-width: 600px;
         padding-bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       @include mixins.for-phone-only {
@@ -102,5 +102,9 @@
         box-shadow: none;
       }
     }
+  }
+
+  @include mixins.for-phone-only {
+    min-height: auto;
   }
 }

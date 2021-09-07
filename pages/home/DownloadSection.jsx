@@ -1,9 +1,9 @@
 import PlayDownloadButtons from "../../common/components/PlayDownloadIButtons";
 import styles from "../../styles/Home.module.scss";
 
-const DownloadSection = () => {
+const DownloadSection = ({downloadRef}) => {
   return (
-    <div className={ styles.downloadSection}>
+    <div className={ styles.downloadSection} ref={downloadRef}>
       <div className={styles.containerFluid}>
         <div
           className={styles.downloadWrapper}

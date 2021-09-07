@@ -10,15 +10,12 @@ const Footer = () => {
           </div>
           <div className={styles.footerItem}>
             <a href="">About</a>
-            <a href="">Job Post</a>
           </div>
           <div className={styles.footerItem}>
             <a href="">Stays</a>
-            <a href="">Blog</a>
           </div>
           <div className={styles.footerItem}>
             <a href="">Contact us</a>
-            <a href="">Download</a>
           </div>
 
           {/* <div className={[styles.footerItem, styles.mailSubs].join(' ')}>
