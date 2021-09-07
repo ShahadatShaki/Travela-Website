@@ -1,12 +1,17 @@
+import clsx from 'clsx';
 import PlayDownloadButtons from "../../common/components/PlayDownloadIButtons";
 import styles from "../../styles/Home.module.scss";
 
-const DownloadSection = ({downloadRef}) => {
+const DownloadSection = ({fullPage, downloadRef}) => {
   return (
     <div className={ styles.downloadSection} ref={downloadRef}>
       <div className={styles.containerFluid}>
         <div
-          className={styles.downloadWrapper}
+          className={
+            clsx(styles.downloadWrapper, {
+              [styles.fullVh]: fullPage == true
+            })
+          }
         >
           <div>
             <h2>Download the app</h2>

@@ -9,6 +9,8 @@ import Footer from "./home/Footer";
 import HeroSection from "./home/HeroSection";
 import MakeMoneySection from "./home/MakeMoneySection";
 
+import { downloadRefScroll } from "../utils/scrollers";
+
 export default function Home() {
   const downloadRef = useRef(null);
   const [aboutUs, setAboutUs] = useState("");
@@ -30,9 +32,6 @@ export default function Home() {
         setTotalUsers(data.total_user);
       });
   }, []);
-
-  const downloadRefScroll = (downloadRef) =>
-    downloadRef.current.scrollIntoView({ behavior: "smooth" });
 
   return (
     <div>
