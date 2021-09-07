@@ -89,7 +89,7 @@ const AvailableSliderSection = ({locations}) => {
             {...settings}
             className="locations-slider"
             >
-          {locations.length > 0 && locations?.map((location) => (
+          {locations && locations?.map((location) => (
             <div className={styles.areaCard} key={ location}>
               <div className={styles.cardTopContent}>
                 <span className={`${styles.areaBadge} ${styles.areaBadgeDark}`}>
