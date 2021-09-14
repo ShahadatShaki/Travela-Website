@@ -73,12 +73,12 @@ const AvailableSliderSection = ({locations}) => {
             <button
               className={styles.arrowBtn}
               onClick={() => handleSlider('prev')}>
-              <img src="images/icons/left-arr2.png" />
+              <img src="images/icons/left-arr2.png" alt="swipe left" />
             </button>
             <button
               className={[styles.arrowBtn, styles.arrowBtnActive].join(' ')}
               onClick={() => handleSlider()}>
-              <img src="images/icons/right-arr2.png" />
+              <img src="images/icons/right-arr2.png" alt="swipe right" />
             </button>
           </div>
         </div>
@@ -104,12 +104,14 @@ const AvailableSliderSection = ({locations}) => {
                     <img
                       src={"images/icons/home.svg"}
                       style={{ marginRight: 6, width: 14 }}
+                      alt={location.title}
                     />
                     <span>{location?.description}</span>
                   </small>
                 </div>
                 <a href="#" className={styles.buttonCircle}>
-                  <img src="images/icons/arr-ri.svg" style={{width: 14}} />
+                  <img src="images/icons/arr-ri.svg" style={{ width: 14 }}
+                    alt={`more on ${location.title}`} />
                 </a>
               </div>
             </div>
