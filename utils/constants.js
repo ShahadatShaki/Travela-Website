@@ -1,0 +1,4 @@
+export const urlPaths = [
+  "/",
+  "/downloads",
+]

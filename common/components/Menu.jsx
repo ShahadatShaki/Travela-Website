@@ -2,6 +2,7 @@ import DownloadButton from "./DownloadButton";
 import MenuDrawer from './MenuDrawer';
 import styles from "../../styles/Common.module.scss";
 import { useState } from "react";
+import PlayDownloadButtons from "./PlayDownloadIButtons";
 
 const Menu = ({aboutContent, stays, downloadRef, downloadRefScroll}) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -64,22 +65,7 @@ const Menu = ({aboutContent, stays, downloadRef, downloadRefScroll}) => {
                   </div>
                   <div className={styles.dropDownFooter}>
                     <h3>Download the app</h3>
-                    <div className={styles.downloadButtons}>
-                      <a
-                        href="http://"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img src="images/button-app.png" alt="" />
-                      </a>
-                      <a
-                        href="http://"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img src="images/button-play.png" alt="" />
-                      </a>
-                    </div>
+                    <PlayDownloadButtons />
                   </div>
                 </div>
               </div>

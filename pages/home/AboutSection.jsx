@@ -22,7 +22,17 @@ const AboutSection = ({contactContent}) => {
               {contactContent?.address}
           </p>
           </div>
-          <img src="images/socialicons.png" alt="" />
+          <div style={{display: 'flex', justifyContent: 'center', gap: '1rem'}}>
+            <a href="https://www.facebook.com/travelaxyz/" target="_blank"> 
+              <img src="images/icons/Facebook.svg" alt="Travela Facebook Page" />
+            </a>
+            <a href="" target="_blank">
+              <img src="images/icons/Twitter.svg" alt="Travela on Twitter" />
+            </a>
+            <a href="" target="_blank">
+              <img src="images/icons/Instagram.svg" alt="Travela on Instagram" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
