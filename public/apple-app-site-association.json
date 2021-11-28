@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "tkhabbab.travela.tt.tk.travela",
-        "paths": ["*"]
+        "paths": [ "NOT /e/", "", "/", "/listing/*" ]
       }
     ]
   }
