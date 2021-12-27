@@ -29,7 +29,7 @@ const Menu = ({aboutContent, stays, downloadRef, downloadRefScroll}) => {
           <div className={styles.leftPart}>
             <div className={styles.logo}>
               <a href="/">
-                <img src="images/travela-logo.png" alt="Travela" height={34} />
+                <img src="/images/travela-logo.png" alt="Travela" height={34} />
               </a>
             </div>
             <div className={`${styles.mobileRightOptions}`} onClick={() => mobileMenuToggle()}>
@@ -38,7 +38,7 @@ const Menu = ({aboutContent, stays, downloadRef, downloadRefScroll}) => {
             <div className={`${styles.menuLinks} ${!menuOpen ? styles.menuLinksHidden: 'Hidden'}`}>
               <div className={styles.menuLink}>
                 <a href="/">
-                  <img className={styles.mobileOnly} src="images/icons/home.svg" />
+                  <img className={styles.mobileOnly} src="images/icons/home.svg" alt="icon" />
                   <span>Home</span>
                 </a>
               </div>

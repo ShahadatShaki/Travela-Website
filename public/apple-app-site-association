@@ -3,8 +3,10 @@
     "apps": [],
     "details": [
       {
-        "appID": "9Q84U9SUZ9.tkhabbab.travela.tt.tk.travela",
-        "paths": [ "NOT /e/", "", "/", "/listing/*" ]
+        "appID": "tkhabbab.travela.tt.tk.travela",
+        "paths": [
+          "*"
+        ]
       }
     ]
   }

@@ -22,7 +22,7 @@ const DownloadSection = ({fullPage, downloadRef}) => {
             <PlayDownloadButtons />
           </div>
           <div className={ styles.mobileMockup}>
-            <img src="images/mobiles.svg" alt="Travela App" width="100%" />
+            <img src="/images/mobiles.svg" alt="Travela App" width="100%" />
           </div>
         </div>
       </div>
