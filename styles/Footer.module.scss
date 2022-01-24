@@ -1,5 +1,5 @@
-@use 'partials/colors';
-@use 'partials/mixins';
+@use "partials/colors";
+@use "partials/mixins";
 
 .footer {
   padding: 5rem 0;
@@ -7,7 +7,7 @@
 
   .footerGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     @include mixins.for-phone-only {
       padding: 0 2rem;

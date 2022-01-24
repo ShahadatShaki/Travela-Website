@@ -289,3 +289,25 @@
     }
   }
 }
+
+
+.base_wrapper{
+
+  @include mixins.for-phone-only {
+    padding: 3rem 2rem 0 2rem;
+  }
+  @include mixins.for-tablet-landscape-up {
+       padding: 3rem 2rem 0 2rem;
+      }
+      @include mixins.for-tablet-portrait-up {
+       padding: 5rem 2rem 3.5rem 2rem;
+      }
+  h2{
+    font-size: 22px;
+  
+  }
+  p{
+    line-height: 1.5;
+      margin-bottom: 20px;
+  }
+}

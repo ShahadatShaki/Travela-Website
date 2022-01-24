@@ -1,4 +1,5 @@
 import styles from "../../styles/Home.module.scss";
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -9,13 +10,27 @@ const Footer = () => {
             <img src="images/travela-logo.png" alt="Travela" />
           </div>
           <div className={styles.footerItem}>
-            <a href="">About</a>
+              <Link href="/about">
+                <a>About Us</a>
+              </Link>
           </div>
+
           <div className={styles.footerItem}>
-            <a href="">Stays</a>
+              <Link href="/terms-conditions">
+                <a>Terms & Conditions</a>
+              </Link>
           </div>
+
           <div className={styles.footerItem}>
-            <a href="">Contact us</a>
+              <Link href="/privacy-policy">
+                <a>Privacy Policy</a>
+              </Link>
+          </div>
+
+          <div className={styles.footerItem}>
+              <Link href="/refund-policy">
+                <a>Refund Policy</a>
+              </Link>
           </div>
 
           {/* <div className={[styles.footerItem, styles.mailSubs].join(' ')}>

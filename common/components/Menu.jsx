@@ -71,7 +71,13 @@ const Menu = ({aboutContent, stays, downloadRef, downloadRefScroll}) => {
                   </div>
                 </div>
               </div>
-              <div className={[styles.menuLink, styles.dropDown].join(" ")}
+              <div className={styles.menuLink}>
+                <a href="/about">
+                  <img className={styles.mobileOnly} src="images/icons/home.svg" alt="icon" />
+                  <span>About</span>
+                </a>
+              </div>
+              {/* <div className={[styles.menuLink, styles.dropDown].join(" ")}
                 onClick={
                   () => handleDrawerOpen({ type: 'about', data: aboutContent })
                 }>
@@ -94,7 +100,7 @@ const Menu = ({aboutContent, stays, downloadRef, downloadRefScroll}) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className={styles.menuLink}>
                 <a href="">
                   <img className={styles.mobileOnly} src="images/icons/home.svg" />
